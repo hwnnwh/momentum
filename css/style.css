@@ -1,1 +1,36 @@
+@import "reset.css";
 @import "hidden.css";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+}
+
+.main {
+  text-align: center;
+}
+
+input {
+  height: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.tail {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 1.3rem;
+}

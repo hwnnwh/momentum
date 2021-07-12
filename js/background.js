@@ -1,26 +1,34 @@
 const images = [
-  "0.jpg",
+  "0.jpeg",
   "1.jpg",
   "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "5.jpg",
-  "6.jpg",
-  "7.jpg",
-  "8.jpg",
-  "9.jpg",
+  "3.jpeg",
+  "4.jpeg",
+  "5.jpeg",
+  "6.jpeg",
+  "7.jpeg",
+  "8.jpeg",
+  "9.jpeg",
   "10.jpg",
-  "11.jpg",
-  "12.jpg",
-  "13.jpg",
-  "14.jpg",
-  "15.jpg",
+  "11.jpeg",
+  "12.jpeg",
 ];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
-
-const bgImage = document.body.createElement("img");
+const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
+document.body.style.background = `url(img/${chosenImage})`;
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundPosition = "center";
+
+if (
+  chosenImage === "10.jpg" ||
+  chosenImage === "11.jpeg" ||
+  chosenImage === "12.jpeg"
+) {
+  document.body.style.color = "rgba(0,0,0,0.6)";
+} else {
+  document.body.style.color = "lavender";
+}
